@@ -1,4 +1,4 @@
-Intro
+## Intro
 Measuring the reading difficulty of a particular text is a common problem in the educational world, assigning an appropriate reading level metric to new resources remains challenging. We aim to classify each text according to its difficulty level. A text with rating 1000 or more imply that the text is academic and needs prior knowledge while a text with rating 100 or below shows that the text is for beginner readers and primary school students. According to that way we could match each reader with the most suitable book. By the most suitable book we mean that the reader will complete it with an acceptable reading accuracy.
 
 Case study
@@ -7,8 +7,8 @@ Current systems have been widely criticized for  misrepresenting the difficulty 
 Target
 Reproducing the results of the Lexile Measure and hopefully improve it.
 
-Plan:
-1. Building our Deep Learning model.
+## Plan:
+### 1. Building our Deep Learning model.
 The whole graduation project is mainly about building our deep learning model using recurrent neural network. 
 		
 I. Data set: One of the biggest problems of the whole learning process is collecting the data that would be fed to the learning model. Our data set input is basically a large list of books titles.
@@ -24,7 +24,7 @@ IV. Building Neural Network: Our Neural network will consist of several layers. 
 V. Choosing algorithm: It seems like it is a supervised learning model. I think the 		problems we need to solve is a linear regression. As we need to output a 	continuous value of levels for each text. 
 VI. Validation and Testing: There is a good portion of our data set we have not fed in our learning model. That’s because we need some data in order to validate the 	correctness and the reliability of our model. Also this portion is not constant. 
 
-2. Building our business model
+### 2. Building our business model
 After making sure that our model is functioning correctly. We have to present our 		product in a fancy way. 
 I. Design Website: A simple interface for a normal user to interact with our precious	learning model. In this website we are going to apply our software engineering	experiences from the past years with latest full stack web development tools and technologies.
 
@@ -34,7 +34,7 @@ III. Explain our tool: A short video will allow users to understand what is it a
 
 
 
-Tool and Technologies that will be used:
+## Tool and Technologies that will be used:
 Python: Python will be our main programming  and scientific language for both our learning model and our website. Python is a flexible and easy syntax language.
 
 Tensorflow-Keras: The famous deep learning environment that has been developed by Google. It will be imported as module within python interpreter.
