@@ -27,6 +27,7 @@ The whole graduation project is mainly about building our deep learning model us
 
 ### 2. Building our business model
 After making sure that our model is functioning correctly. We have to present our 		product in a fancy way. 
+
 **I. Design Website:** A simple interface for a normal user to interact with our precious	learning model. In this website we are going to apply our software engineering	experiences from the past years with latest full stack web development tools and technologies.
 
 **II. Deploy Website:** Our precious model will have to experience being on the cloud and deal with real users, accept reviews and learn from mistakes. It also depends on our data set license.
