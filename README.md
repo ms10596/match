@@ -64,3 +64,5 @@ Heroku: Online platform that offers hosting websites.
 Scrum: One of the most famous agile ways that we are going to follow through our project. We will divide our project to several sprints. Every sprint will take one or two weeks to complete and ends by a sprint review.
 
 Whatsapp: Our main communication method to contact each other and our beloved supervisor Dr. Ali Fahmy..
+
+[Colab](https://colab.research.google.com/notebooks/welcome.ipynb#recent=true): 3 different laptops with 3 different environments. Google Colab provide an easy to use online deep learning environment to serve the model. The amazing part is that it offers free gpu.
