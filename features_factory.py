@@ -13,7 +13,10 @@ class FeaturesFactory:
     def avg_sentence_length(self):
         return mean([len(word_tokenize(i)) for i in sent_tokenize(self.body)])
 
+    def avg_word_length(self):
+        return mean([len(i) for i in word_tokenize(self.body)])
+
 
 if __name__ == '__main__':
     x = FeaturesFactory(load()[0])
-    print(x.avg_sentence_length())
+    print(x.avg_word_length())
