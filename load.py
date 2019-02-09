@@ -1,4 +1,4 @@
-import os
+from os import listdir
 
 
 def load():
@@ -6,14 +6,14 @@ def load():
     :return: list of objects {article: , tag: }
 
     """
-    texts = []
+    articles = []
     for tag in ['A1', 'A2', 'B1', 'B2', 'C1', 'C2']:
-        files = os.listdir('CEFR/' + tag)
+        files = listdir('CEFR/' + tag)
         for i in files:
             f = open('CEFR/' + tag + '/' + i)
             article = f.read()
-            texts.append({'article': article, 'tag': tag})
-    return texts
+            articles.append({'body': article, 'tag': tag})
+    return articles
 
 
-print(load()[0])
+# print(load()[0])
