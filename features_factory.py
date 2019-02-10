@@ -2,8 +2,6 @@ from statistics import mean
 
 from nltk import word_tokenize, sent_tokenize, pos_tag
 
-from load import load
-
 
 class FeaturesFactory:
     def __init__(self, article):
@@ -18,8 +16,3 @@ class FeaturesFactory:
 
     def adj(self):
         return len([i for i in pos_tag(word_tokenize(self.body)) if i[1] == 'JJ'])
-
-
-if __name__ == '__main__':
-    x = FeaturesFactory(load()[0])
-    print(x.adj())
