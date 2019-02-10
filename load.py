@@ -23,11 +23,12 @@ def load_x_y():
     data = load()
     x, y = numpify(data)
     portion = int(0.8 * len(x))
-    x_train  = x[:portion]
+    print(portion)
+    x_train = x[:portion]
     y_train = y[:portion]
 
     x_test = x[portion:]
     y_test = y[portion:]
 
     return x_train, y_train, x_test, y_test
-
+load_x_y()
