@@ -1,6 +1,6 @@
 from os import listdir
 
-from numpifying import numpify
+from research.numpifying import numpify
 
 
 def load():
@@ -11,9 +11,9 @@ def load():
     tags = ['A1', 'A2', 'B1', 'B2', 'C1', 'C2']
     articles = []
     for tag in tags:
-        files = listdir('CEFR/' + tag)
+        files = listdir('research/CEFR/' + tag)
         for i in files:
-            f = open('CEFR/' + tag + '/' + i)
+            f = open('research/CEFR/' + tag + '/' + i)
             article = f.read()
             articles.append({'body': article, 'tag': tags.index(tag)})
     return articles
@@ -31,4 +31,4 @@ def load_x_y():
     y_test = y[portion:]
 
     return x_train, y_train, x_test, y_test
-load_x_y()
+# load_x_y()

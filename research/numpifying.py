@@ -2,7 +2,7 @@ from random import shuffle
 
 import numpy as np
 
-from features_factory import FeaturesFactory
+from research.features_factory import FeaturesFactory
 
 
 def numpify(data):
