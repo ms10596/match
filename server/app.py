@@ -1,7 +1,7 @@
 from flask import Flask, render_template, request
-import sys
-sys.path.insert(0, '../research')
-from model import predict_tag
+
+from research.model import predict_tag
+
 app = Flask(__name__)
 
 

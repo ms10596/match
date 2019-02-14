@@ -1,7 +1,7 @@
 from os import listdir
 
 from research.numpifying import numpify
-
+from research.article import Article
 
 def load():
     """
@@ -15,7 +15,7 @@ def load():
         for i in files:
             f = open('research/CEFR/' + tag + '/' + i)
             article = f.read()
-            articles.append({'body': article, 'tag': tags.index(tag)})
+            articles.append(Article(article, tag))
     return articles
 
 
