@@ -1,6 +1,6 @@
 from flask import Flask, render_template, request
 
-from research.training.model import predict_tag
+from research.model import predict_tag
 
 app = Flask(__name__)
 
