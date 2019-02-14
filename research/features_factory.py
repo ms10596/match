@@ -5,8 +5,8 @@ from nltk import word_tokenize, sent_tokenize, pos_tag
 
 class FeaturesFactory:
     def __init__(self, article):
-        self.body = article['body']
-        self.tag = article['tag']
+        self.body = article.body
+        self.tag = article.tag
         self.words = word_tokenize(self.body)
 
     def avg_sentence_length(self):

@@ -1,6 +1,6 @@
 from flask import Flask, render_template, request
 
-from research.model import predict_tag
+from research.training.model import predict_tag
 
 app = Flask(__name__)
 
@@ -10,7 +10,6 @@ def hello_world():
     if request.method == 'GET':
         return render_template('Home.html')
     if request.method == 'POST':
-        print(request.form['text'])
         return predict_tag(request.form['text'])
 
 
