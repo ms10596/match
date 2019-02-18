@@ -21,7 +21,7 @@ class FeaturesFactory:
     def adv(self):
         return len([i for i in pos_tag(self.words) if i[1] == 'RB'])
 
-    def articles(self):
+    def article(self):
         return len([i for i in pos_tag(self.words) if i[1] == 'DT'])
 
     def conjunctions(self):

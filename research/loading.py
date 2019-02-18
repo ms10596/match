@@ -27,12 +27,23 @@ class Load:
     @staticmethod
     def numpify(articles):
         shuffle(articles)
-        x = np.empty(shape=(len(articles), 2))
+        x = np.empty(shape=(len(articles), 12))
         y = np.empty(shape=(len(articles), 1), dtype=object)
         for i in range(len(articles)):
             ff = FeaturesFactory(articles[i])
             x[i][0] = ff.avg_sentence_length()
             x[i][1] = ff.avg_word_length()
+            x[i][2] = ff.adj()
+            x[i][3] = ff.adv()
+            x[i][4] = ff.article()
+            x[i][5] = ff.conjunctions()
+            x[i][6] = ff.interjections()
+            x[i][7] = ff.nouns()
+            x[i][8] = ff.numerals()
+            x[i][9] = ff.past_participle()
+            x[i][10] = ff.pronouns()
+            x[i][11] = ff.special_symbols()
+
             y[i] = ff.tag
         return x, y
 
