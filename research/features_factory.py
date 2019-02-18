@@ -17,3 +17,34 @@ class FeaturesFactory:
 
     def adj(self):
         return len([i for i in pos_tag(self.words) if i[1] == 'JJ'])
+
+    def adv(self):
+        return len([i for i in pos_tag(self.words) if i[1] == 'RB'])
+
+    def articles(self):
+        return len([i for i in pos_tag(self.words) if i[1] == 'DT'])
+
+    def conjunctions(self):
+        return len([i for i in pos_tag(self.words) if i[1] == 'IN'])
+
+    def interjections(self):
+        return len([i for i in pos_tag(self.words) if i[1] == 'UH'])
+
+    def nouns(self):
+        return len([i for i in pos_tag(self.words) if i[1] == 'NNS'])
+
+    def numerals(self):
+        return len([i for i in pos_tag(self.words) if i[1] == 'CD'])
+
+    def past_participle(self):
+        return len([i for i in pos_tag(self.words) if i[1] == 'VBN'])
+
+    # def preposition(self):
+    #     return len([i for i in pos_tag(self.words) if i[1] == ''])
+    def pronouns(self):
+        return len([i for i in pos_tag(self.words) if i[1] == 'PRP'])
+
+    # def punctuation(self):
+    #     return len([i for i in pos_tag(self.words) if i[1] == ''])
+    def special_symbols(self):
+        return len([i for i in pos_tag(self.words) if i[1] == 'SYM'])
