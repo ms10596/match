@@ -59,4 +59,4 @@ asked her. "No," she said, "now my left arm hurts a lot.""")
 print(x.tags)
 f = open('nltk_tags', 'w+')
 import nltk
-f.write(nltk.help.upenn_tagset())
+nltk.help.upenn_tagset()
