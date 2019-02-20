@@ -3,7 +3,6 @@ from random import shuffle
 import numpy as np
 
 from research.article import Article
-from research.features_factory import FeaturesFactory
 
 
 class Load:
