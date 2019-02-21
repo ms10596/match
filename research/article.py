@@ -1,54 +1,121 @@
-from statistics import mean
-
-from nltk import word_tokenize, sent_tokenize, pos_tag
+from nltk import word_tokenize, sent_tokenize, pos_tag, FreqDist
 
 
 class Article:
-    def __init__(self, body, tag='Unknown'):
+    def __init__(self, body, category='Unknown'):
         self.body = body
-        self.tag = tag
+        self.category = category
+
         self.words = word_tokenize(self.body)
-        self.tags = pos_tag(self.words)
+        self.sentences = sent_tokenize(self.body)
+        # print(len(self.sentences))
 
-    def avg_sentence_length(self):
-        return mean([len(word_tokenize(i)) for i in sent_tokenize(self.body)])
+        self.word_tags = pos_tag(self.words)
+        self.frequencies = FreqDist([i[1] for i in self.word_tags])
+        # print(self.frequencies.get('NNP'))
 
-    def avg_word_length(self):
-        return mean([len(i) for i in self.words])
+    def quotation_mark(self):
+        return self.frequencies["""''"""] + self.frequencies["""``"""]
 
-    def adj(self):
-        return len([i for i in pos_tag(self.words) if i[1] == 'JJ'])
+    def parenthesis(self):
+        return self.frequencies['('] + self.frequencies[')']
 
-    def adv(self):
-        return len([i for i in pos_tag(self.words) if i[1] == 'RB'])
+    def comma(self):
+        return self.frequencies[',']
 
-    def article(self):
-        return len([i for i in pos_tag(self.words) if i[1] == 'DT'])
+    def dash(self):
+        return self.frequencies['--']
 
-    def conjunctions(self):
-        return len([i for i in pos_tag(self.words) if i[1] == 'IN'])
+    def sentence_terminator(self):
+        return self.frequencies['.']
 
-    def interjections(self):
-        return len([i for i in pos_tag(self.words) if i[1] == 'UH'])
+    def colon(self):
+        return self.frequencies[':']
 
-    def nouns(self):
-        return len([i for i in pos_tag(self.words) if i[1] == 'NNS'])
+    def conjunction(self):
+        return self.frequencies['CC']
 
     def numerals(self):
-        return len([i for i in pos_tag(self.words) if i[1] == 'CD'])
+        return self.frequencies['CD']
 
-    def past_participle(self):
-        return len([i for i in pos_tag(self.words) if i[1] == 'VBN'])
+    def determiner(self):
+        return self.frequencies['DT']
 
-    # def preposition(self):
-    #     return len([i for i in pos_tag(self.words) if i[1] == ''])
-    def pronouns(self):
-        return len([i for i in pos_tag(self.words) if i[1] == 'PRP'])
+    def existensial(self):
+        return self.frequencies['EX']
 
-    # def punctuation(self):
-    #     return len([i for i in pos_tag(self.words) if i[1] == ''])
-    def special_symbols(self):
-        return len([i for i in pos_tag(self.words) if i[1] == 'SYM'])
+    def foreign_word(self):
+        return self.frequencies['FW']
+
+    def preposition(self):
+        return self.frequencies['IN']
+
+    def adjective(self):
+        return self.frequencies['JJ']
+
+    def comparative_adjective(self):
+        return self.frequencies['JJR']
+
+    def superlative_adjective(self):
+        return self.frequencies['JJS']
+
+    def item_marker(self):
+        return self.frequencies['LS']
+
+    def modal(self):
+        return self.frequencies['MD']
+
+    def common_nouns(self):
+        return self.frequencies['NN'] + self.frequencies['NNS']
+
+    def proper_nouns(self):
+        return self.frequencies['NNP'] + self.frequencies['NNPS']
+
+    def predeterminer(self):
+        return self.frequencies['PDT']
+
+    def genitive_marker(self):
+        return self.frequencies['POS']
+
+    def pronoun(self):
+        return self.frequencies['PRP'] + self.frequencies['PRP$']
+
+    def adverb(self):
+        return self.frequencies['RB']
+
+    def comparative_adverb(self):
+        return self.frequencies['RBR']
+
+    def superlative_adverb(self):
+        return self.frequencies['RBS']
+
+    def particle(self):
+        return self.frequencies['RP']
+
+    def symbol(self):
+        return self.frequencies['SYM']
+
+    def to(self):
+        return self.frequencies['SYM']
+
+    def interjection(self):
+        return self.frequencies['UH']
+
+    def verb(self):
+        return self.frequencies['VB'] + self.frequencies['VBP'] + self.frequencies['VBZ']
+
+    def verb_past(self):
+        return self.frequencies['VBD']
+
+    def verb_present_participle(self):
+        return self.frequencies['VBG']
+
+    def verb_past_participle(self):
+        return self.frequencies['VBN']
+
+    def WH(self):
+        return self.frequencies['WDT'] + self.frequencies['WP'] + self.frequencies['WP$'] + self.frequencies['WRB']
+
 
 
 x = Article("""Lucy went to the doctor. She didn't feel good. The doctor asked, "What's the problem?
@@ -56,7 +123,4 @@ What's the matter?" She said she didn't feel right. "Do you hurt? Where do you h
 she hurt all over. She hurt everywhere. She hurt all over her body. The doctor said, "You have a big problem. I will
 fix your problem." The doctor gave Lucy a shot. He gave her a shot in her left arm. "Do you feel better now?" he
 asked her. "No," she said, "now my left arm hurts a lot.""")
-print(x.tags)
-f = open('nltk_tags', 'w+')
-import nltk
-nltk.help.upenn_tagset()
+print(x.quotation_mark())
