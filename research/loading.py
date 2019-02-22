@@ -3,7 +3,7 @@ from random import shuffle
 import numpy as np
 
 from research.article import Article
-
+import re
 
 class Load:
 
@@ -50,6 +50,13 @@ class Load:
 
         return x_train, y_train, x_test, y_test
 
-
-Load.load()
+    @staticmethod
+    def load_pos_tags():
+        f = open('/home/ms10596/Documents/match/research/nltk_tags')
+        dic = {}
+        for line in f:
+            a, b = line.strip().split(': ')
+            dic[a] = b
+        return dic
+Load.load_pos_tags()
 # print(__file__)
