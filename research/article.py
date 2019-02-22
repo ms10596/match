@@ -12,6 +12,7 @@ class Article:
         self.word_tags = pos_tag(self.words)
         self.frequencies = FreqDist([i[1] for i in self.word_tags])
         self.reduced_frequencies = {}
+        self.features_reduction()
 
     def get_frequency(self, feature_name):
         try:
@@ -31,7 +32,7 @@ class Article:
             'NNP') + self.get_frequency('NNPS')
         self.reduced_frequencies['numerals'] = self.get_frequency('CD')
         self.reduced_frequencies['past_part'] = self.get_frequency('VBN')
-        self.reduced_frequencies['preposition'] = self.get_frequency('IN')
+        self.reduced_frequencies['prepositions'] = self.get_frequency('IN')
         self.reduced_frequencies['pronouns'] = self.get_frequency('PRP') + self.get_frequency('PRP$')
         self.reduced_frequencies['punctuation'] = self.get_frequency('``') + self.get_frequency(
             '\'\'') + self.get_frequency('(') + self.get_frequency(')') + self.get_frequency(',') + self.get_frequency(

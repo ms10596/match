@@ -23,14 +23,14 @@ def raw():
 
 def numpify(articles):
     # shuffle(articles)
-    features = load_pos_tags()
-    x = np.empty(shape=(len(articles), len(features)), dtype=np.float64)
+    features = load_reduced_features_tags()
+    x = np.empty(shape=(len(articles), len(features)), dtype=np.int)
     y = np.empty(shape=(len(articles), 1), dtype=np.int)
     for i in range(len(articles)):
         j = 0
         for feature_name in features.keys():
             try:
-                x[i][j] = int(articles[i].frequencies.get(feature_name))
+                x[i][j] = int(articles[i].reduced_frequencies.get(feature_name))
             except TypeError:
                 x[i][j] = 0
             j = j + 1
@@ -56,3 +56,13 @@ def load_pos_tags():
         a, b = line.strip().split(': ')
         dic[a] = b
     return dic
+
+
+def load_reduced_features_tags():
+    f = open('/home/ms10596/Documents/match/research/reduced_features')
+    dic = {}
+    for line in f:
+        a, b = line.strip().split(':')
+        dic[a] = b
+    return dic
+# print(load_reduced_features_tags())
