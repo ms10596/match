@@ -1,8 +1,7 @@
 import tensorflow as tf
 from tensorflow import keras
 
-from research.loading import Load
-
+from research.loading import load
 tags = ['A1', 'A2', 'B1', 'B2', 'C1', 'C2']
 
 
@@ -24,5 +23,5 @@ class Model:
         # model.save('model.h5')
 
 
-x, y = Load.load()
+x, y = load()
 Model(x, y).train()

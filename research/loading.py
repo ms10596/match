@@ -56,7 +56,3 @@ def load_pos_tags():
         a, b = line.strip().split(': ')
         dic[a] = b
     return dic
-
-# x, y = Load.load()
-# print(x[0])
-# print(__file__)
