@@ -12,6 +12,7 @@ class Article:
 
         self.word_tags = pos_tag(self.words)
         self.frequencies = FreqDist([i[1] for i in self.word_tags])
+        # print(self.frequencies.items())
         # print(len(self.frequencies))
         # print(self.frequencies.get('NNP'))
 
