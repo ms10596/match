@@ -4,6 +4,8 @@ import numpy as np
 
 from research.article import Article
 
+from random import shuffle
+
 
 def load():
     return numpify(raw())
@@ -22,7 +24,7 @@ def raw():
 
 
 def numpify(articles):
-    # shuffle(articles)
+    shuffle(articles)
     features = load_reduced_features_tags()
     x = np.empty(shape=(len(articles), len(features)), dtype=np.int)
     y = np.empty(shape=(len(articles), 1), dtype=np.int)
@@ -36,17 +38,6 @@ def numpify(articles):
             j = j + 1
         y[i] = articles[i].category
     return x, y
-
-
-def divide(x, y):
-    portion = int(0.8 * len(x))
-    x_train = x[:portion]
-    y_train = y[:portion]
-
-    x_test = x[portion:]
-    y_test = y[portion:]
-
-    return x_train, y_train, x_test, y_test
 
 
 def load_pos_tags():
@@ -65,4 +56,3 @@ def load_reduced_features_tags():
         a, b = line.strip().split(':')
         dic[a] = b
     return dic
-# print(load_reduced_features_tags())
