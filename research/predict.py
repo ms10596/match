@@ -1,15 +1,23 @@
 import numpy as np
 from tensorflow import keras
 from research.article import Article
+from research.loading import  load_reduced_features_tags
 tags = ['A1', 'A2', 'B1', 'B2', 'C1', 'C2']
 
 
 def predict_tag(raw):
-    x = np.empty(shape=(1, 2))
-    ff = Article(raw)
-    x[0][0] = ff.avg_sentence_length()
-    x[0][1] = ff.avg_word_length()
-    model = keras.models.load_model('/home/ms10596/Documents/match/research/model.h5')
+    article = Article(raw)
+    features = load_reduced_features_tags()
+    x = np.empty(shape=(1, len(features)))
+    j = 0
+    for feature_name in features.keys():
+        try:
+            x[0][j] = int(article.reduced_frequencies.get(feature_name))
+        except TypeError:
+            x[0][j] = 0
+        j = j + 1
+
+    model = keras.models.load_model('/home/ms10596/Documents/match/model.h5')
     list_of_probabilities = model.predict(x)
     return tags[list_of_probabilities.argmax()]
 
