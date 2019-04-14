@@ -1,5 +1,6 @@
 from nltk import word_tokenize, sent_tokenize, pos_tag, FreqDist
-
+# os.path.abspath(os.curdir)
+from statistics import mean
 
 class Article:
     def __init__(self, body, category='Unknown'):
@@ -38,3 +39,6 @@ class Article:
             '\'\'') + self.get_frequency('(') + self.get_frequency(')') + self.get_frequency(',') + self.get_frequency(
             '--') + self.get_frequency('.') + self.get_frequency(':')
         self.reduced_frequencies['symbols'] = self.get_frequency('SYM')
+
+    def avg_word_length(self):
+        return mean([len(i) for i in self.words])

@@ -10,7 +10,7 @@ def hello_world():
     if request.method == 'GET':
         return render_template('Home.html')
     if request.method == 'POST':
-        return predict_tag(request.form['text'])
+        return """<p style="font-size:100px">"""+predict_tag(request.form['text'])+"</p>"
 
 
 if __name__ == '__main__':
