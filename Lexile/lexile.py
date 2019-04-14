@@ -1,26 +1,20 @@
-from math import log
 import re
 from collections import defaultdict
+from math import log
 from statistics import mean
 
-from nltk import word_tokenize, sent_tokenize
+from nltk import sent_tokenize, regexp_tokenize
 
 
 class Lexile:
     def __init__(self, string):
-        self.sentences = sent_tokenize(string)
-        self.words = word_tokenize(string.lower())
+        self.sentences = sent_tokenize(string.lower())
+        self.words = regexp_tokenize(string.lower(), "\w+")
         self.wordsFreq = defaultdict(int)
         self.get_frequencies()
-        self.removeNonChar()
-
-    def removeNonChar(self):
-        for i in self.words:
-            if re.search('[^a-zA-Z0-9]', i):
-                self.words.remove(i)
 
     def mean_sentence_length(self):
-        return mean([len(word_tokenize(i)) for i in self.sentences])
+        return mean([len(regexp_tokenize(i, "\w+")) for i in self.sentences])
 
     def mean_word_freq(self):
         return log(mean([self.wordsFreq[i] for i in self.words]), 10)
