@@ -26,12 +26,10 @@ class Lexile:
         f = open("freq.txt", encoding="ISO-8859-1")
         while True:
             line = f.readline().strip()
-            # print(line)
             if line == '':
                 break
             else:
                 splitted = line.split(" ")
-                # print(splitted)
                 self.wordsFreq[splitted[0]] = int(splitted[1])
         return self.wordsFreq
 

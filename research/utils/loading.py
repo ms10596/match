@@ -1,10 +1,9 @@
 from os import listdir
+from random import shuffle
 
 import numpy as np
 
-from research.article import Article
-
-from random import shuffle
+from research.FF_model.article import Article
 
 
 def load():
