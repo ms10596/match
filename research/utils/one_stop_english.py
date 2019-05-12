@@ -1,6 +1,8 @@
 from os import path, listdir, curdir
 from random import shuffle
 
+from tabulate import tabulate
+
 text_path = '/home/ms10596/Documents/match/research/utils/Corpus/OneStopEnglishCorpus/Texts-SeparatedByReadingLevel'
 sentences_path = path.join(path.abspath(curdir), 'Corpus/OneStopEnglishCorpus/Sentence-Aligned')
 
@@ -13,9 +15,8 @@ class OneStopEnglish:
         # self.__shuffle()
 
     def load_raw(self):
-        print("heyoo")
         for i in ['Ele-Txt', 'Int-Txt', 'Adv-Txt']:
-            files = [i for i in listdir(path.join(text_path, i)) if not i.startswith('.')]
+            files = sorted([i for i in listdir(path.join(text_path, i)) if not i.startswith('.')])
             for j in files:
                 f = open(path.join(text_path, i, j))
                 self.articles.append(f.read())
@@ -50,8 +51,13 @@ class OneStopEnglish:
         intermediate = [i[1] for i in all if len(i) == 2]
         return intermediate, elementary
 
-
-# x = OneStopEnglish()
+    def summary(self):
+        print("# of articles:", len(self.articles))
+        print("# of Elementary articles:", len(self.articles) // 3)
+        print("# of Intermediate articles:", len(self.articles) // 3)
+        print("# of Advanced articles:", len(self.articles) // 3)
+x = OneStopEnglish()
+print(x.summary())
 # a, b = x.load_advanced_elementary()
 # print(a[1])
 # print(b[1])
