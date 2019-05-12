@@ -1,7 +1,7 @@
 from os import path, listdir, curdir
 from random import shuffle
 
-text_path = path.join(path.abspath(curdir), 'Corpus/OneStopEnglishCorpus/Texts-SeparatedByReadingLevel')
+text_path = '/home/ms10596/Documents/match/research/utils/Corpus/OneStopEnglishCorpus/Texts-SeparatedByReadingLevel'
 sentences_path = path.join(path.abspath(curdir), 'Corpus/OneStopEnglishCorpus/Sentence-Aligned')
 
 
@@ -10,9 +10,10 @@ class OneStopEnglish:
         self.articles = []
         self.tags = []
         self.load_raw()
-        self.__shuffle()
+        # self.__shuffle()
 
     def load_raw(self):
+        print("heyoo")
         for i in ['Ele-Txt', 'Int-Txt', 'Adv-Txt']:
             files = [i for i in listdir(path.join(text_path, i)) if not i.startswith('.')]
             for j in files:

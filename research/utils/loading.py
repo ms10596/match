@@ -3,7 +3,7 @@ from random import shuffle
 
 import numpy as np
 
-from research.FF_model.article import Article
+from research.FF.article import Article
 
 
 def load():

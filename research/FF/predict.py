@@ -1,6 +1,6 @@
 import numpy as np
 from tensorflow import keras
-from research.FF_model.article import Article
+from research.FF.article import Article
 from research.utils.loading import  load_reduced_features_tags
 tags = ['A1', 'A2', 'B1', 'B2', 'C1', 'C2']
 
@@ -17,7 +17,7 @@ def predict_tag(raw):
             x[0][j] = 0
         j = j + 1
 
-    model = keras.models.load_model('/home/ms10596/Documents/match/FF_model.h5')
+    model = keras.models.load_model('/home/ms10596/Documents/match/FF.h5')
     list_of_probabilities = model.predict(x)
     return tags[list_of_probabilities.argmax()]
 
