@@ -1,3 +1,4 @@
+from collections import defaultdict
 from os import listdir
 from random import shuffle
 
@@ -55,3 +56,14 @@ def load_reduced_features_tags():
         a, b = line.strip().split(':')
         dic[a] = b
     return dic
+
+
+def load_glove_embeddings():
+    glove = defaultdict(lambda: np.zeros(shape=(50,)))
+    with open('/home/ms10596/Documents/match/research/utils/glove/glove.6B.50d.txt') as f:
+        for line in f:
+            if line == '':
+                break
+            values = line.split()
+            glove[values[0]] = np.array(values[1:])
+    return glove
