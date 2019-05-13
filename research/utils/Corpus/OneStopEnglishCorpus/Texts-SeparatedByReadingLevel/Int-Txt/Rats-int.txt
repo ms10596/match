@@ -1,4 +1,4 @@
-Intermediate 
+
 Scientists have connected the brains of two animals and allowed them to share sensory information. It is a major step towards what the researchers call the worlds first organic computer.
 The US team fitted two rats with devices called brain-to-brain interfaces that let the animals collaborate on simple tasks to earn rewards, such as a drink of water. In one important demonstration of the technology, the scientists used the internet to connect the brains of two rats separated by thousands of miles  one in North Carolina, USA, and the other in Natal, Brazil.
 The researchers were led by Miguel Nicolelis, a pioneer of devices that allow paralyzed people to control computers and robotic arms with their thoughts. They say their latest work could make it possible for multiple brains to be connected to share information. These experiments showed that we have established a sophisticated, direct communication connection between brains, Nicolelis said. Basically, we are creating what I call an organic computer.

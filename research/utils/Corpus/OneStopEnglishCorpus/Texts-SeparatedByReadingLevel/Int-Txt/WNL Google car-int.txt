@@ -1,4 +1,4 @@
-Intermediate 
+
 A car with a top speed of 25mph, two seats and no pedals or steering wheel might not make much of an impression at a motor show. But Google, in the US, sent a shock through the car and taxi industries as it unveiled the latest version of its driverless car.
 The electrically powered vehicle, which Google has begun testing around its headquarters in Mountain View, California, dispenses with all the normal controls, including foot pedals. Instead, it has a smartphone app that calls it and tells it the destination, and a single STOP button between the two front-facing seats in case the passengers need to override the computer.
 The car, in fact, does all the tasks of navigation, steering, acceleration and braking.

@@ -1,4 +1,3 @@
-Elementary
 Scientists have made an atlas of the brain. It shows how the meanings of words are organized in different regions of the brain. The atlas uses rainbow colours to show how words and their meanings are grouped together in areas of the brain. 
 We wanted to build a giant atlas that shows how the meanings of words are represented in the brain, said Jack Gallant, a neuroscientist at the University of California, Berkeley.
 No single brain region contains one word or idea. A single brain spot contains a number of related words. And, each single word appears in many different brain spots. Together, they form networks that represent the meanings of each word we use: life and love, death and taxes. All have their own networks.

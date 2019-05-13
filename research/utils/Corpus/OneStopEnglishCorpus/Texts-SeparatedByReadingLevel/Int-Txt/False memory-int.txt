@@ -1,4 +1,4 @@
-Intermediate 
+
 Scientists have implanted a false memory in the brains of mice in an experiment that they hope will help to explain why people remember events or experiences that have never happened.
 False memories are a major problem with witness statements in courts of law. Evidence that eyewitnesses give often leads to guilty verdicts, but later the convictions are overturned when DNA or some other evidence is used.
 Susumu Tonagawa, a neuroscientist at the Massachusetts Institute of Technology (MIT), and his team wanted to study how these false memories might form in the human brain, so they encoded memories in the brains of mice by manipulating individual neurons. Memories of experiences we have had are made from several elements including records of objects, space and time. These records are encoded in physical and chemical changes in brain cells and the connections between them. According to Tonagawa, both false and genuine memories seem to use the same brain mechanisms.

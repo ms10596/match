@@ -1,4 +1,3 @@
-Elementary
 A top-secret document shows that the US National Security Agency (NSA) now has direct access to the systems of Google, Facebook, Apple and other major US internet companies. The NSA access is part of a program called PRISM, which allows the government to collect search history, the content of emails, file transfers, live chats and more, the document says.
 The document says that the NSA can now get information directly from the servers of major US internet companies. It says the companies help them run the program, but all the companies that commented said they have not heard of the program.
 Google said: Google cares very much about the security of our users data. We disclose user data to government legally and, when the government asks us for data, we think about it carefully first. Sometimes, people allege that we have created a government back door into our systems, but Google does not have a back door for the government to access private user data.

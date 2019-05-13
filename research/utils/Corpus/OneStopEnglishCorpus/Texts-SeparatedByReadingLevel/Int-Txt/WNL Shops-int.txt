@@ -1,4 +1,4 @@
-Intermediate 
+
 Behind the bright lights and mirrored panels, cameras are watching you. If you pick up a boot, a camera will make sure you dont put it into your bag. Enter a department store and you will be watched. But new technology is less focused on shoplifting and more interested in your age, sex and shopping habits.
 A few months ago, IT company Computer Sciences Corporation (CSC) wrote a report that said around 30% of stores use facial recognition technology to track customers in-store. Facial recognition is a technology that can identify people by analysing and comparing facial features from a database. It uses devices such as Intel RealSense cameras, which are able to analyse everything from particular expressions to the clothing brands someone is wearing.
 Intel spokesman Joe Jensen says that the aim of using RealSense technology in shops is not to create databases of speci c peoples lives but to build generalized models of peoples lifestyles and shopping habits. We dont need to know a particular customer. We need to know that this shopper has these characteristics and that, when those characteristics are present, this is what a person tends to do.

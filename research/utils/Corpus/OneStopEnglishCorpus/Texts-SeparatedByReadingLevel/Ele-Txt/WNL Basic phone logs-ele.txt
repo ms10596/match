@@ -1,4 +1,3 @@
-Elementary
 Two scientists at Stanford University, in the USA, used metadata on peoples telephone calls and texts to find out peoples names, where they lived and the names of their partners. The metadata told them what number people called, when and for how long but it didnt tell them what people said.
 But, that was not all. With the same metadata, they could find out private information about some people. They discovered that one man had a gun and that another man had a heart problem. Other data told them that someone was having a baby and someone had a serious illness.
 The results show the extraordinary power of telephone metadata. It is particularly powerful when you use it together with information from Google, Yelp and Facebook.

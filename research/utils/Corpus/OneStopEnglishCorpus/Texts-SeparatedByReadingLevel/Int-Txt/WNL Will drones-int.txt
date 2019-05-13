@@ -1,4 +1,4 @@
-Intermediate 
+
 Will we soon live in a world where drones deliver packages? If you believe Amazon, the answer is yes. Others are not so sure: we need to make more technical progress in this area but there is also the problem of public safety.
 Amazon spokesman Paul Misener told a US congress hearing recently that his company would be ready as soon as all the rules were in place. The Federal Aviation Authority (FAA) will  nally have regulations on the commercial use of unmanned aircraft by June 2016. But the technology has a long way to go before then and larger machines arent legal yet  only drones up to 25kg will be legal. And the FAA says that, if youre going to crowd the skies with radio- controlled  ying robots, they must all use different radio frequencies that nobody can jam or hijack.
 Professor Sajiv Singh, who runs a cargo delivery company called NearEarth, said that, to pilot a state-of-the-art drone, you simply give it some basic instructions: go to this altitude, perform this short task, go back home. But even short  ights from a mobile landing pad could cause serious logistical problems, he said.

@@ -1,4 +1,3 @@
-Elementary
 Race engineer A race engineer takes information from the driver and gives it to the mechanics.
 Typical salary: You start at 25,000 and very soon earn more than 40,000 with just a few years experience. Senior race engineers earn 50,000 to 90,000.
 What the job involves: A race engineer is the interpreter between the race-car mechanics and the driver, says race engineer Jamie Muir. The engineer takes feedback from the driver, analyses the data and gives this to the mechanics.

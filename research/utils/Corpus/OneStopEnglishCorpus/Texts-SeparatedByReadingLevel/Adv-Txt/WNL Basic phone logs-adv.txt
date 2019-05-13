@@ -1,4 +1,3 @@
-Advanced
 The mass collection of telephone records by government surveillance programmes poses a clear threat to the personal privacy of ordinary citizens, according to US researchers who used basic phone logs to identify people and uncover confidential information about their lives.
 Armed with anonymous metadata on peoples calls and texts, but not the content of the communications, two scientists at Stanford University worked out individuals names, where they lived and the names of their partners. But that was not all.
 The same data led them to uncover potentially sensitive information about some individuals. One man was found to own a rifle, while another had recently been diagnosed with an irregular heartbeat. Other data pointed to a new pregnancy and a person with multiple sclerosis.

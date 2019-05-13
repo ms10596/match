@@ -1,4 +1,4 @@
-Intermediate 
+
 A new, high-tech computer-assisted autopsy system is becoming more and more popular in European hospitals. Its inventor has said the technique could eventually mean there is no such thing as a perfect murder.
 The method, called Virtopsy, is now being used at some forensic medical institutes in Europe, after it was pioneered by a group of scientists at the University of Zurich. A traditional autopsy begins by using a knife to make a Y-shaped cut in the chest. But now pathologists are able to examine the dead body in 3-D via computer screens.
 Michael Thali, the Director of Zurichs Institute for Forensic Medicine in Europe, and one of the inventors of Virtopsy, said it had the potential to revolutionize criminal investigations. Basically there will be no such thing as the perfect murder any more because a virtual autopsy allows you to find every piece of evidence, he said.
