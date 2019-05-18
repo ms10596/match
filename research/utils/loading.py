@@ -65,5 +65,5 @@ def load_glove_embeddings():
             if line == '':
                 break
             values = line.split()
-            glove[values[0]] = np.array(values[1:])
+            glove[values[0]] = np.array(values[1:], dtype='float32')
     return glove
