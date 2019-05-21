@@ -1,7 +1,7 @@
 import numpy as np
 from tensorflow import keras
-from research.FF.article import Article
-from research.utils.loading import  load_reduced_features_tags
+from FF.article import Article
+from utils.loading import  load_reduced_features_tags
 tags = ['A1', 'A2', 'B1', 'B2', 'C1', 'C2']
 
 

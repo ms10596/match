@@ -4,7 +4,7 @@ from random import shuffle
 
 import numpy as np
 
-from research.FF.article import Article
+from FF.article import Article
 
 
 def load():

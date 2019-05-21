@@ -1,6 +1,6 @@
 import matplotlib.pyplot as plt
 
-from research.utils.loading import load, load_reduced_features_tags
+from utils.loading import load, load_reduced_features_tags
 
 x, y = load()
 pos_tags = load_reduced_features_tags()
