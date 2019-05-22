@@ -1,7 +1,7 @@
 from os import path, listdir, curdir
 from random import shuffle
 
-text_path = '/home/ms10596/Documents/match/research/utils/Corpus/OneStopEnglishCorpus/Texts-SeparatedByReadingLevel'
+text_path = '/home/ms10596/PycharmProjects/match/utils/Corpus/OneStopEnglishCorpus/Texts-SeparatedByReadingLevel'
 sentences_path = path.join(path.abspath(curdir), 'Corpus/OneStopEnglishCorpus/Sentence-Aligned')
 
 

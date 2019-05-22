@@ -60,7 +60,7 @@ def load_reduced_features_tags():
 
 def load_glove_embeddings():
     glove = defaultdict(lambda: np.zeros(shape=(50,)))
-    with open('/home/ms10596/Documents/match/research/utils/glove/glove.6B.50d.txt') as f:
+    with open('/home/ms10596/PycharmProjects/match/utils/glove/glove.6B.50d.txt') as f:
         for line in f:
             if line == '':
                 break
