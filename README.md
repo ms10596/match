@@ -1,3 +1,4 @@
+# Matching readers with text through Deep Learning
 ## Intro
 Measuring the reading difficulty of a particular text is a common problem in the educational world, assigning an appropriate reading level metric to new resources remains challenging. We aim to classify each text according to its difficulty level. A text with rating 1000 or more imply that the text is academic and needs prior knowledge while a text with rating 100 or below shows that the text is for beginner readers and primary school students. According to that way we could match each reader with the most suitable book. By the most suitable book we mean that the reader will complete it with an acceptable reading accuracy.
 
