@@ -77,7 +77,11 @@ class OneStopEnglish:
         print("# of Advanced articles:", len(self.articles) // 3)
 
 
-x = OneStopEnglish()
+# x = OneStopEnglish()
+# a, b = x.load_advanced_elementary()
+# print(len(a))
+# print(len(b))
+
 # print(x.summary())
 # a, b = x.load_advanced_elementary()
 # print(a[1])
