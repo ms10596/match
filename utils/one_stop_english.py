@@ -48,9 +48,24 @@ def corpus_to_words(corpus):
     articles = []
     tags = []
     for i in file_names:
-        articles.append(corpus.words(i))
+        articles.append(list(corpus.words(i)))
         tags.append(labels_names.index(i[-14:-11]))
     return articles, tags
 
 
+def corpus_to_pos(corpus):
+    labels_names = ['ele', 'int', 'adv']
+    articles = []
+    tags = []
+    for i in file_names:
+        articles.append([j[1] for j in corpus.tagged_words(i)])
+        tags.append(labels_names.index(i[-14:-11]))
+    return articles, tags
 
+
+# a, b = corpus_to_pos(load_corpus())
+# print(len(a), len(b))
+# print(a[0])
+# print(b[0])
+# a, b = corpus_to_words(load_corpus())
+# print(a[0])
