@@ -31,13 +31,6 @@ def load_intermediate_elementary():
     return intermediate, elementary
 
 
-def summary(self):
-    print("# of articles:", len(self.articles))
-    print("# of Elementary articles:", len(self.articles) // 3)
-    print("# of Intermediate articles:", len(self.articles) // 3)
-    print("# of Advanced articles:", len(self.articles) // 3)
-
-
 def load_corpus():
     corpus = BracketParseCorpusReader(root=path, fileids=file_names[1:])
     return corpus
@@ -61,7 +54,6 @@ def corpus_to_pos(corpus):
         articles.append([j[1] for j in corpus.tagged_words(i)])
         tags.append(labels_names.index(i[-14:-11]))
     return articles, tags
-
 
 # a, b = corpus_to_pos(load_corpus())
 # print(len(a), len(b))
