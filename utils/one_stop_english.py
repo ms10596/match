@@ -55,9 +55,11 @@ def corpus_to_pos(corpus):
         tags.append(labels_names.index(i[-14:-11]))
     return articles, tags
 
-# a, b = corpus_to_pos(load_corpus())
-# print(len(a), len(b))
-# print(a[0])
-# print(b[0])
-# a, b = corpus_to_words(load_corpus())
-# print(a[0])
+
+if __name__ == '__main__':
+    corpus = load_corpus()
+    a, b = corpus_to_pos(corpus)
+    print(len(a), len(b))
+    print(a[0])
+    print(b[0])
+
