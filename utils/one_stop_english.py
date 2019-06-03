@@ -56,10 +56,17 @@ def corpus_to_pos(corpus):
     return articles, tags
 
 
-if __name__ == '__main__':
-    corpus = load_corpus()
-    a, b = corpus_to_pos(corpus)
-    print(len(a), len(b))
-    print(a[0])
-    print(b[0])
+def detokenize(l):
+    from nltk.tokenize.treebank import TreebankWordDetokenizer
+    return TreebankWordDetokenizer().detokenize(l)
 
+
+if __name__ == '__main__':
+    print(detokenize(['Hello', 'it', 'is', 'me']))
+    corpus = load_corpus()
+    # a, b = corpus_to_pos(corpus)
+    # print(len(a), len(b))
+    # print(a[0])
+    # print(b[0])
+    print(corpus)
+# 'Amazon-adv.parsed.txt'
