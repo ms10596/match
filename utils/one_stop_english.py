@@ -62,11 +62,26 @@ def detokenize(l):
 
 
 if __name__ == '__main__':
-    print(detokenize(['Hello', 'it', 'is', 'me']))
-    corpus = load_corpus()
+    # import collections
+    # x = collections.Counter(['Hello', 'it', 'is', 'me'])
+    # x = [['Hello', 'it', 'is', 'me'], ['Please', 'anybody', 'hears', 'me'], ['me', 'mine', 'you']]
+    x = ["Hello it is me", "Please anybody hears me", "me mine you"]
+    # x = "Hello it is me"
+    from tensorflow.python import keras
+
+    tokenizer = keras.preprocessing.text.Tokenizer(num_words=100)
+    tokenizer.fit_on_texts(x)
+    sequences = tokenizer.texts_to_sequences(x)
+    print(sequences)
+    sequences = keras.preprocessing.sequence.pad_sequences(sequences, maxlen=10)
+    print(sequences)
+    print(tokenizer.index_word)
+
+    # print(detokenize(['Hello', 'it', 'is', 'me']))
+    # corpus = load_corpus()
     # a, b = corpus_to_pos(corpus)
     # print(len(a), len(b))
     # print(a[0])
     # print(b[0])
-    print(corpus)
+    # print(corpus)
 # 'Amazon-adv.parsed.txt'
