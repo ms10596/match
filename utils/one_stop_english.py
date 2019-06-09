@@ -88,5 +88,5 @@ def opennmt_preprocessing():
     tgt_train_file.close()
 
 
-if __name__ == '__main__':
-    opennmt_preprocessing()
+# if __name__ == '__main__':
+    # opennmt_preprocessing()
