@@ -3,8 +3,8 @@ from os import path, listdir, curdir
 from nltk.corpus.reader.bracket_parse import BracketParseCorpusReader
 
 sentences_path = path.join(path.abspath(curdir), 'Corpus/OneStopEnglishCorpus/Sentence-Aligned')
-path = "/home/ms10596/PycharmProjects/match/utils/Corpus/OneStopEnglishCorpus/Processed-AllLevels-AllFiles/Parsed"
-file_names = sorted(listdir(path))[1:]
+parsed_path = "/home/ms10596/PycharmProjects/match/utils/Corpus/OneStopEnglishCorpus/Processed-AllLevels-AllFiles/Parsed"
+file_names = sorted(listdir(parsed_path))[1:]
 
 
 def load_advanced_elementary():
@@ -32,7 +32,7 @@ def load_intermediate_elementary():
 
 
 def load_corpus():
-    corpus = BracketParseCorpusReader(root=path, fileids=file_names[1:])
+    corpus = BracketParseCorpusReader(root=parsed_path, fileids=file_names[1:])
     return corpus
 
 
@@ -61,27 +61,16 @@ def detokenize(l):
     return TreebankWordDetokenizer().detokenize(l)
 
 
+def opennmt_preprocessing():
+    a, b = load_advanced_elementary()
+    advanced_sents = open('advanced_sents.txt', mode='w')
+    elementary_sents = open('elementary_sents.txt', mode='w')
+    for i in range(len(a)):
+        advanced_sents.write(a[i]+'\n')
+        elementary_sents.write(b[i]+'\n')
+    advanced_sents.close()
+    elementary_sents.close()
+
+
 if __name__ == '__main__':
-    # import collections
-    # x = collections.Counter(['Hello', 'it', 'is', 'me'])
-    # x = [['Hello', 'it', 'is', 'me'], ['Please', 'anybody', 'hears', 'me'], ['me', 'mine', 'you']]
-    x = ["Hello it is me", "Please anybody hears me", "me mine you"]
-    # x = "Hello it is me"
-    from tensorflow.python import keras
-
-    tokenizer = keras.preprocessing.text.Tokenizer(num_words=100)
-    tokenizer.fit_on_texts(x)
-    sequences = tokenizer.texts_to_sequences(x)
-    print(sequences)
-    sequences = keras.preprocessing.sequence.pad_sequences(sequences, maxlen=10)
-    print(sequences)
-    print(tokenizer.index_word)
-
-    # print(detokenize(['Hello', 'it', 'is', 'me']))
-    # corpus = load_corpus()
-    # a, b = corpus_to_pos(corpus)
-    # print(len(a), len(b))
-    # print(a[0])
-    # print(b[0])
-    # print(corpus)
-# 'Amazon-adv.parsed.txt'
+    opennmt_preprocessing()
