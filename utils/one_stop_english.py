@@ -1,6 +1,7 @@
 from os import path, listdir, curdir
 
 from nltk.corpus.reader.bracket_parse import BracketParseCorpusReader
+from sklearn.utils import shuffle
 
 sentences_path = path.join(path.abspath(curdir), 'Corpus/OneStopEnglishCorpus/Sentence-Aligned')
 parsed_path = "/home/ms10596/PycharmProjects/match/utils/Corpus/OneStopEnglishCorpus/Processed-AllLevels-AllFiles/Parsed"
@@ -63,13 +64,28 @@ def detokenize(l):
 
 def opennmt_preprocessing():
     a, b = load_advanced_elementary()
-    advanced_sents = open('advanced_sents.txt', mode='w')
-    elementary_sents = open('elementary_sents.txt', mode='w')
-    for i in range(len(a)):
-        advanced_sents.write(a[i]+'\n')
-        elementary_sents.write(b[i]+'\n')
-    advanced_sents.close()
-    elementary_sents.close()
+    a, b = shuffle(a, b)
+    src_train = a[:1625]
+    tgt_train = b[:1625]
+
+    src_val = a[1625:]
+    tgt_val = b[1625:]
+
+    src_train_file = open('src-train.txt', mode='w')
+    tgt_train_file = open('tgt-train.txt', mode='w')
+    src_val_file = open('src-val.txt', mode='w')
+    tgt_val_file = open('tgt-val.txt', mode='w')
+
+    for i in range(len(src_train)):
+        src_train_file.write(src_train[i] + '\n')
+        tgt_train_file.write(tgt_train[i] + '\n')
+    src_train_file.close()
+    tgt_train_file.close()
+    for i in range(len(src_val)):
+        src_val_file.write(src_val[i] + '\n')
+        tgt_val_file.write(tgt_val[i] + '\n')
+    src_val_file.close()
+    tgt_train_file.close()
 
 
 if __name__ == '__main__':
