@@ -4,7 +4,7 @@ from nltk.corpus.reader.bracket_parse import BracketParseCorpusReader
 from sklearn.utils import shuffle
 
 sentences_path = path.join(path.abspath(curdir), 'Corpus/OneStopEnglishCorpus/Sentence-Aligned')
-parsed_path = "/home/ms10596/PycharmProjects/match/utils/Corpus/OneStopEnglishCorpus/Processed-AllLevels-AllFiles/Parsed"
+parsed_path = path.join(path.abspath(curdir), 'Corpus/OneStopEnglishCorpus/Processed-AllLevels-AllFiles/Parsed')
 file_names = sorted(listdir(parsed_path))[1:]
 
 
@@ -87,6 +87,5 @@ def opennmt_preprocessing():
     src_val_file.close()
     tgt_train_file.close()
 
-
 # if __name__ == '__main__':
-    # opennmt_preprocessing()
+#     opennmt_preprocessing()
