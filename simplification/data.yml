@@ -7,7 +7,10 @@ data:
   eval_labels_file: tgt-val.txt
   source_words_vocabulary: src-vocab.txt
   target_words_vocabulary: tgt-vocab.txt
+  source_embedding:
+    path: embed/glove.6B.300d.txt
+    with_header: False
+    case_insensitive: True
+    trainable: False
 train:
-  train_steps: 2000
-
-
+  train_steps: 10000

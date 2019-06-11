@@ -11,8 +11,12 @@ file_names = sorted(listdir(parsed_path))[1:]
 def load_advanced_elementary():
     f = open(path.join(sentences_path, 'ADV-ELE.txt'))
     all = [i.strip().split('\n') for i in f.read().split("*******")]
-    advanced = [i[0] for i in all if len(i) == 2]
-    elementary = [i[1] for i in all if len(i) == 2]
+    advanced = []
+    elementary = []
+    for i in all:
+        if len(i) == 2:
+            advanced.append(i[0].lower())
+            elementary.append(i[1].lower())
     return advanced, elementary
 
 
@@ -87,5 +91,7 @@ def opennmt_preprocessing():
     src_val_file.close()
     tgt_train_file.close()
 
+
 # if __name__ == '__main__':
 #     opennmt_preprocessing()
+
