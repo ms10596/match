@@ -7,14 +7,7 @@ data:
   eval_labels_file: tgt-val.txt
   source_words_vocabulary: src-vocab.txt
   target_words_vocabulary: tgt-vocab.txt
-  source_tokenization:
-    mode: conservative
-  source_embedding:
-    path: embed/glove.6B.50d.txt
-    with_header: True
-    case_insensitive: True
-    trainable: False
 train:
-  train_steps: 1000
+  train_steps: 2000
 
 

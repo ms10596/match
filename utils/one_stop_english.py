@@ -4,7 +4,7 @@ from nltk.corpus.reader.bracket_parse import BracketParseCorpusReader
 from sklearn.utils import shuffle
 
 sentences_path = path.join(path.abspath(curdir), 'Corpus/OneStopEnglishCorpus/Sentence-Aligned')
-parsed_path = path.join(path.abspath(curdir), 'Corpus/OneStopEnglishCorpus/Processed-AllLevels-AllFiles/Parsed')
+parsed_path = '/home/ms10596/PycharmProjects/match/utils/Corpus/OneStopEnglishCorpus/Processed-AllLevels-AllFiles/Parsed'
 file_names = sorted(listdir(parsed_path))[1:]
 
 
