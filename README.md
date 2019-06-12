@@ -30,3 +30,11 @@ ___
 ### Other
 > Why neural network? <br>
 > Capable of learning representation for groups of sequences without being explicitly told about existence of such group.
+___
+> What could cause a low accuracy? 
+* A small dataset
+___
+> What should we take care about in neural network?
+* High training accuracy implies good optimization among the seen data.
+* High validation accuracy implies good generalization among unseen data.
+* We need to balance both of accuracies to avoid over fitting and under fitting
