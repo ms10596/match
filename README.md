@@ -38,3 +38,11 @@ ___
 * High training accuracy implies good optimization among the seen data.
 * High validation accuracy implies good generalization among unseen data.
 * We need to balance both of accuracies to avoid over fitting and under fitting
+---
+> Convolution Neural Network
+---
+> Steps for applying neural network
+* Now we have 33% of data of class Beginner, 33% of data of class Intermediate and 33% of data of class Advanced.
+* So our baseline accuracy is 33% because the probability of picking a random class is (number of desired outcome/number of all outcomes).
+* So the model accuracy should start on 33%
+* the next table illustrate the cycle of tuning parameters and watching accuracy and loss until reaching our acceptable result.
