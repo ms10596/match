@@ -40,6 +40,12 @@ ___
 * We need to balance both of accuracies to avoid over fitting and under fitting
 ---
 > Convolution Neural Network
+* We are using a 1 dimensional convolution layer followed by max pool layer.
+* *One-dimensional-layer* can recognize local patterns in a sequence.
+* Using window size of 5 should be able to learn words or word fragments of 5 or less
+* *Max-pooling-layer* extract patches from input and output the maximum value.
+* This is used for reducing length of input (down sampling)
+![_](conv.png)
 ---
 > Steps for applying neural network
 * Now we have 33% of data of class Beginner, 33% of data of class Intermediate and 33% of data of class Advanced.
