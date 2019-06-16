@@ -1,4 +1,5 @@
 from os import path, listdir, curdir
+from statistics import mean
 
 from nltk.corpus.reader.bracket_parse import BracketParseCorpusReader
 from sklearn.utils import shuffle
@@ -92,6 +93,9 @@ def opennmt_preprocessing():
     tgt_train_file.close()
 
 
-# if __name__ == '__main__':
-#     opennmt_preprocessing()
+def average_sentence_length():
+    corpus = load_corpus()
+    return mean(len(i) for i in corpus.sents())
 
+# if __name__ == '__main__':
+# print(average_sentence_length())
