@@ -8,7 +8,7 @@
 * The task of assessing the reading difficulty is a well studied problem for the last century.
 ### Related work
 * There are a lot formulas that measure the readability like
-![x](formulaes.png)
+![x](docs/formulaes.png)
 * Flesch-Kincaid grade level is so popular, It is used in Windows Microsoft Word application.
 ---
 > What is the problem with those formulas? <br>
@@ -45,7 +45,7 @@ ___
 * Using window size of 5 should be able to learn words or word fragments of 5 or less
 * *Max-pooling-layer* extract patches from input and output the maximum value.
 * This is used for reducing length of input (down sampling)
-![_](conv.png)
+![_](docs/conv.png)
 ---
 > Steps for applying neural network
 * Now we have 33% of data of class Beginner, 33% of data of class Intermediate and 33% of data of class Advanced.
