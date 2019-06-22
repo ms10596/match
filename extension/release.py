@@ -14,8 +14,8 @@ def soft_acc(y_true, y_pred):
 class Prediction:
     def __init__(self):
         import tensorflow as tf
-        self.model = tf.keras.models.load_model('model-182-0.613687-0.736842.h5', custom_objects={'soft_acc': soft_acc})
-        with open('tokenizer.json') as f:
+        self.model = tf.keras.models.load_model('assessment_model.h5', custom_objects={'soft_acc': soft_acc})
+        with open('assessment_tokenizer.json') as f:
             data = json.load(f)
             self.tokenizer = tokenizer_from_json(data)
         self.levels = ['Beginner', 'Intermediate', 'Advanced']
