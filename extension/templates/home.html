@@ -1,0 +1,15 @@
+{% extends 'template.html' %}
+
+{% block body %}
+<form id="myform" method="POST">
+    <div class="form-group">
+        <label for="article">Write your article</label>
+        <textarea class="form-control" name="article" rows="3"></textarea>
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+<br>
+<div class="alert alert-primary" role="alert">
+    {{result}}
+</div>
+{% endblock %}

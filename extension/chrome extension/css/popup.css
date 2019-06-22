@@ -1,0 +1,33 @@
+.level-control {
+    display: inline-block;
+    border: 1px solid #CCC;
+    padding: 5px;
+}
+
+.badge-icon-text {
+    color: white;
+    font-weight: bold;
+    font-family: Verdana, Arial, sans-serif;
+}
+
+.badge-icon {
+    color: lightgray;
+    transition: color 0.1s ease 0s;
+}
+
+.level1 > .badge-icon.active { color: #EDE44D; }
+.level2 > .badge-icon.active { color: #F1941B; }
+.level3 > .badge-icon.active { color: #ff0000; }
+
+
+.valign {
+    display: flex;
+    align-items: center;
+}
+
+.top5 { margin-top:5px; }
+.top7 { margin-top:7px; }
+.top10 { margin-top:10px; }
+.top15 { margin-top:15px; }
+.top17 { margin-top:17px; }
+.top30 { margin-top:30px; }
