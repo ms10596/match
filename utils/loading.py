@@ -49,7 +49,7 @@ def numpify(articles):
 
 
 def load_pos_tags():
-    f = open('/home/ms10596/PycharmProjects/match/research/nltk_tags')
+    f = open('/home/ms10596/PycharmProjects/match/FF/nltk_tags')
     dic = {}
     for line in f:
         a, b = line.strip().split(': ')
@@ -58,7 +58,7 @@ def load_pos_tags():
 
 
 def load_reduced_features_tags():
-    f = open('/home/ms10596/PycharmProjects/match/research/reduced_features')
+    f = open('/home/ms10596/PycharmProjects/match/FF/reduced_features')
     dic = {}
     for line in f:
         a, b = line.strip().split(':')
