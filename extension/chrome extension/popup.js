@@ -33,10 +33,12 @@ function setup() {
         bubbles.append("Level: ");
         renderBubbles(bubbles, level);
         row.append(bubbles);
-        var result = $('<div class="alert alert-primary" role="alert"/>');
-        result.append("Reading difficulty : " + data);
+        var result = $('<div class="alert alert-primary" role="alert">');
+        result.append("Reading difficulty : " + data + "</div>");
+        var button = $('<button type="button" class="btn btn-primary" id="simplify">simplify</button>');
         lvlctrl.append(row);
         lvlctrl.append(result);
+        lvlctrl.append(button);
     }
     request.open("POST", url);
     request.setRequestHeader("Content-Type", "application/json");
@@ -61,3 +63,20 @@ function renderBubbles(lvlctrl, activeLevel) {
         lvlctrl.append($(badgeIcon));
     }
 }
+
+$(document).on('click', '#simplify', function () {
+    var url = 'http://127.0.0.1:5000/extension/simplify';
+    var postData = {
+        "txt": text
+    };
+    var request = new XMLHttpRequest();
+    request.onload = function () {
+        var status = request.status;
+        var data = request.responseText;
+        alert(data);
+    }
+    request.open("POST", url);
+    request.setRequestHeader("Content-Type", "application/json");
+    request.send(JSON.stringify(postData));
+});
+

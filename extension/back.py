@@ -27,5 +27,13 @@ def extension():
     result = x.predict(article['txt'])
     return result
 
+@app.route('/extension/simplify', methods=['POST'])
+def simplification():
+    article = request.get_json()
+    x = Prediction()
+    result = x.simplify(article['txt'])
+    return render_template('home.html', result=result)
+
+
 if __name__ == '_main__':
     app.run(debug=True)
