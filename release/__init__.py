@@ -15,16 +15,16 @@ def soft_acc(y_true, y_pred):
 
 class Prediction:
     def __init__(self):
-        self.__assessment_model = tf.keras.models.load_model('assessment_model.h5',
+        self.__assessment_model = tf.keras.models.load_model('release/assessment_model.h5',
                                                              custom_objects={'soft_acc': soft_acc})
-        self.__simplification_model = tf.keras.models.load_model('simplification_model.h5')
-        with open('assessment_tokenizer.json') as f:
+        self.__simplification_model = tf.keras.models.load_model('release/simplification_model.h5')
+        with open('release/assessment_tokenizer.json') as f:
             data = json.load(f)
             self.__assessment_tokenizer = tokenizer_from_json(data)
-        with open('simplification_tokenizer.json') as f:
+        with open('release/simplification_tokenizer.json') as f:
             data = json.load(f)
             self.__simplification_tokenizer = tokenizer_from_json(data)
-        self.levels = ['Elementary', 'Intermediate', 'Advanced']
+        self.levels = ['Beginner', 'Intermediate', 'Advanced']
         self.__id_to_word = {i: word for word, i in self.__simplification_tokenizer.word_index.items()}
 
     def predict(self, text):
@@ -52,8 +52,8 @@ class Prediction:
                 maxlen=1000, padding='post', truncating='post'), num_classes=45)
 
 
-x = Prediction()
-print(x.simplify("""china is the biggest coal importer, and indonesia the biggest exporter, having temporarily overtaken australia."""))
+# x = Prediction()
+# print(x.simplify("""china is the biggest coal importer, and indonesia the biggest exporter, having temporarily overtaken australia."""))
 # print(x.simplify("""When you see the word Amazon, whats the first thing you think of  the worlds biggest forest, the longest river or the largest internet shop  and which do you think is most important?
 # These are the questions in a debate about the internet. Brazil and Peru have made objections to a bid made by the US online shop for the domain name, .amazon.
 # Amazon has asked for its company name to be a top-level domain name (currently .com), but the South American governments say this would stop the use of this internet address for environmental protection, indigenous rights and other public interest uses.
