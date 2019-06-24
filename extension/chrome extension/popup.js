@@ -1,8 +1,10 @@
+var text;
+
 function setup() {
     noCanvas();
 
     let bgpage = chrome.extension.getBackgroundPage();
-    let text = bgpage.word;
+    text = bgpage.word;
     console.log(text);
 
     var url = 'http://127.0.0.1:5000/extension';
@@ -69,14 +71,18 @@ $(document).on('click', '#simplify', function () {
     var postData = {
         "txt": text
     };
-    var request = new XMLHttpRequest();
-    request.onload = function () {
-        var status = request.status;
-        var data = request.responseText;
-        alert(data);
+    var req = new XMLHttpRequest();
+    req.onload = function () {
+        var status = req.status;
+        var data = req.responseText;
+        var result = window.open("", "_blank");
+        var doc = result.document;
+        doc.open("text/html", "replace");
+        doc.write(data);
+        doc.close();
     }
-    request.open("POST", url);
-    request.setRequestHeader("Content-Type", "application/json");
-    request.send(JSON.stringify(postData));
+    req.open("POST", url);
+    req.setRequestHeader("Content-Type", "application/json");
+    req.send(JSON.stringify(postData));
 });
 

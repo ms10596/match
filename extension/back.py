@@ -8,6 +8,7 @@ app = Flask(__name__)
 app.debug = True
 CORS(app)
 
+
 @app.route('/', methods=['GET'])
 def page():
     return render_template('home.html')
@@ -17,8 +18,14 @@ def page():
 def process():
     article = request.form.get('article')
     x = Prediction()
-    result = x.predict(article)
+    if "assess" in request.form:
+        result = x.predict(article)
+
+    elif "simplify" in request.form:
+        result = x.simplify(article)
+
     return render_template('home.html', result=result)
+
 
 @app.route('/extension', methods=['POST'])
 def extension():
@@ -26,6 +33,7 @@ def extension():
     x = Prediction()
     result = x.predict(article['txt'])
     return result
+
 
 @app.route('/extension/simplify', methods=['POST'])
 def simplification():
@@ -36,4 +44,4 @@ def simplification():
 
 
 if __name__ == '_main__':
-    app.run(debug=True)
+        app.run(debug=True)
