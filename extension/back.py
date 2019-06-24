@@ -24,7 +24,7 @@ def process():
     elif "simplify" in request.form:
         result = x.simplify(article)
 
-    return render_template('home.html', result=result)
+    return render_template('home.html', result=result, article=article)
 
 
 @app.route('/extension', methods=['POST'])
@@ -40,7 +40,7 @@ def simplification():
     article = request.get_json()
     x = Prediction()
     result = x.simplify(article['txt'])
-    return render_template('home.html', result=result)
+    return render_template('home.html', result=result, article=article['txt'])
 
 
 if __name__ == '_main__':
