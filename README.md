@@ -1,4 +1,5 @@
 # match
+![logo](poster/images/MATCH.png)
 ## Matching readers with text through readability assessment.
 ### Abstract
 * Classifying text according to its (readability|difficulty|complexity) we use those 3 words interchangeably.
